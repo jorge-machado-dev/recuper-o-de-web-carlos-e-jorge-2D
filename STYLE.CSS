@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #d8d8d8;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.urna {
+    background: #c5c5c5;
+    width: 750px;
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    gap: 25px;
+    box-shadow: 0 8px 20px #555;
+}
+
+header {
+    display: none;
+}
+
+.tela {
+    background: #e8e8d8;
+    width: 55%;
+    min-height: 390px;
+    border: 8px solid #333;
+    padding: 25px;
+    color: #222;
+}
+
+.tela h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.tela h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.numeros {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.numeros input {
+    width: 55px;
+    height: 65px;
+    font-size: 35px;
+    text-align: center;
+    border: 2px solid #222;
+    background: transparent;
+}
+
+.candidato {
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 2;
+}
+
+#mensagem {
+    font-weight: bold;
+    color: #006400;
+}
+
+.teclado {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.teclado button {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 18px;
+    font-size: 23px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.teclado button:hover {
+    background: #444;
+}
+
+.teclado .zero {
+    grid-column: 2;
+}
+
+.teclado .branco {
+    grid-column: 2;
+    background: white;
+    color: black;
+    font-size: 13px;
+}
+
+.teclado .corrige {
+    background: #e68a00;
+    color: black;
+    font-size: 13px;
+}
+
+.teclado .confirma {
+    background: #168b35;
+    color: white;
+    font-size: 13px;
+    grid-column: 1;
+    grid-row: 5;
+}
+
+@media (max-width: 700px) {
+    .urna {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .tela,
+    .teclado {
+        width: 100%;
+    }
+}
